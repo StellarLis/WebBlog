@@ -23,7 +23,7 @@ A better version of my previous web app where you can post your blogs. Also you 
 * In `/server` folder run `npm run start:dev`
 * Go to `/client` folder and run `npm install`, then run `npm start`.
 <br/>
-Now, you should have an app opened on port `3000`, so now you can open http://localhost:3000/ link.
+Now, you should have an app opened on port 3000, so now you can open http://localhost:3000/ link.
 
 ## Screenshots:
 ![Screenshot_3](https://github.com/StellarLis/Messenger/assets/86295320/80966a17-9f03-4cb9-841d-a880ae37efbd)
