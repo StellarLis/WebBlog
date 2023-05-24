@@ -14,6 +14,7 @@ A better version of my previous web app where you can post your blogs. Also you 
 * Sequelize ORM
 * JWT (for authentication)
 * Swagger (for documentation)
+* Jest (Unit testing)
 
 ## How to use:
 * Clone this repository
