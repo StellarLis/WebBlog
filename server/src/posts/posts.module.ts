@@ -1,4 +1,4 @@
-import { Module, forwardRef } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { PostsController } from './posts.controller';
 import { PostsService } from './posts.service';
 import { SequelizeModule } from '@nestjs/sequelize';
@@ -15,4 +15,4 @@ import { JwtModule } from '@nestjs/jwt';
   controllers: [PostsController],
   providers: [PostsService]
 })
-export class PostsModule {}
+export class PostsModule { }

@@ -1,11 +1,11 @@
 import { Body, Controller, Get, Header, Param, Post, UseGuards } from '@nestjs/common';
 import { CreatePostDto } from './dto/create-post.dto';
 import { PostsService } from './posts.service';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthGuard } from '../auth/auth.guard';
 
 @Controller('posts')
 export class PostsController {
-    constructor(private postsService: PostsService) {}
+    constructor(private postsService: PostsService) { }
 
     @Post('create')
     @UseGuards(AuthGuard)
@@ -17,7 +17,7 @@ export class PostsController {
     async getLatestPosts() {
         return await this.postsService.getLatestPosts()
     }
-    
+
     @Get('/:userId')
     async getPostsById(@Param('userId') userId: number) {
         return await this.postsService.getPostsById(userId);

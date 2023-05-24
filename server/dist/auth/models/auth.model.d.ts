@@ -1,5 +1,5 @@
 import { Model } from "sequelize-typescript";
-import { Post } from "src/posts/models/posts.model";
+import { Post } from "../../posts/models/posts.model";
 interface UserCreationAttrs {
     email: string;
     password: string;
