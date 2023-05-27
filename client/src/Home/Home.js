@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 import Blog from '../Blogs/Blog';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { mainContext } from '../App';
 
 const Home = ({ responseBody }) => {
     const body = responseBody;
     const [blogsArray, setBlogsArray] = useState([]);
 
+    const backendUrl = useContext(mainContext);
     useEffect(() => {
-        axios.get('http://localhost:5000/posts/latest')
+        axios.get(`${backendUrl}/posts/latest`)
             .then(response => {
                 setBlogsArray(response.data);
             });

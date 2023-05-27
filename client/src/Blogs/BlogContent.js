@@ -1,14 +1,16 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { mainContext } from "../App";
 
 const BlogContent = () => {
 
     const { id } = useParams();
     const [blogBody, setBlogBody] = useState({});
 
+    const backendUrl = useContext(mainContext);
     useEffect(() => {
-        axios.get(`http://localhost:5000/posts/getOne/${id}`).then(response => {
+        axios.get(`${backendUrl}/posts/getOne/${id}`).then(response => {
             setBlogBody(response.data);
         })
     }, [])

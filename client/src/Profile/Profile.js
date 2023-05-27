@@ -1,14 +1,16 @@
 import { Link, useOutletContext } from "react-router-dom";
 import Blog from "../Blogs/Blog";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from 'axios';
+import { mainContext } from "../App";
 
 const Profile = () => {
     const body = useOutletContext();
     const [blogsArray, setBlogsArray] = useState([]);
 
+    const backendUrl = useContext(mainContext);
     useEffect(() => {
-        axios.get(`http://localhost:5000/posts/${body.userId}`)
+        axios.get(`${backendUrl}/posts/${body.userId}`)
             .then(response => {
                 const arr = response.data;
                 arr.reverse();

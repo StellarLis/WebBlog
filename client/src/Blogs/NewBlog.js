@@ -2,6 +2,8 @@ import { Formik, Form, Field } from 'formik';
 import * as yup from 'yup';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import axios from 'axios';
+import { useContext } from 'react';
+import { mainContext } from '../App';
 
 const NewBlog = () => {
     const validationSchema = yup.object({
@@ -15,9 +17,9 @@ const NewBlog = () => {
 
     const responseBody = useOutletContext();
     const navigate = useNavigate();
+    const backendUrl = useContext(mainContext);
     const createBlog = (title, content) => {
-        console.log(responseBody);
-        axios.post('http://localhost:5000/posts/create', {
+        axios.post(`${backendUrl}/posts/create`, {
             title, content, creatorEmail: responseBody.email, userId: responseBody.userId
         }, {
             headers: {

@@ -2,7 +2,8 @@ import { Formik, Form, Field } from 'formik';
 import * as yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { mainContext } from '../App';
 
 const Login = () => {
     const validationSchema = yup.object({
@@ -17,8 +18,9 @@ const Login = () => {
 
     const navigate = useNavigate();
     const [serverError, setServerError] = useState(null);
+    const backendUrl = useContext(mainContext);
     const login = (email, password) => {
-        axios.post('http://localhost:5000/auth/login', {
+        axios.post(`${backendUrl}/auth/login`, {
             email, password
         }).then(response => {
             const token = response.data.token;
