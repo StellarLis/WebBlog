@@ -1,7 +1,6 @@
-# WebBlog2
+# WebBlog
 
-A better version of my previous web app where you can post your blogs. Also you have your profile page with a list of your own blogs. <br/>
-Link to the working site: https://inquisitive-mochi-28a427.netlify.app/
+A website where users can post their blogs.
 
 # Stack:
 
