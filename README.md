@@ -32,6 +32,6 @@ A website where users can post their blogs.
 
 ## Screenshots:
 
-![Screenshot_3](https://github.com/StellarLis/Messenger/assets/86295320/80966a17-9f03-4cb9-841d-a880ae37efbd)
-![Screenshot_4](https://github.com/StellarLis/Messenger/assets/86295320/d03d3a0f-6b17-4dee-9602-802d81a238e3)
-![Screenshot_5](https://github.com/StellarLis/Messenger/assets/86295320/325498df-282f-48b2-926a-f466cf3d3b04)
+![Screenshot_1](https://github.com/StellarLis/WebBlog/assets/86295320/a8a7ab4d-fe5c-4ac7-8d79-c35a230744a6)
+![Screenshot_2](https://github.com/StellarLis/WebBlog/assets/86295320/26a0bc55-3165-4e46-a19c-1779642610cd)
+![Screenshot_3](https://github.com/StellarLis/WebBlog/assets/86295320/7c36d72e-02d0-493c-b491-6a2b5a6ddc5e)
